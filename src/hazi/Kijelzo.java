@@ -28,11 +28,9 @@ public abstract class Kijelzo {
     private Integer valaszIdo;
     private Integer fogyasztas;
 
-    /*
-    public Kijelzo(String nev, String grafikusFelbontas, String kepernyoFelbontas) {
+    public Kijelzo(String nev, String felbontas) {
         this.nev = nev;
-        this.grafikusFelbontas = grafikusFelbontas;
-        this.kepernyoFelbontas = kepernyoFelbontas;
+        this.felbontas = felbontas;
     }
 
     public Kijelzo(String nev, Double szelesseg, Double magassag) {
@@ -40,7 +38,7 @@ public abstract class Kijelzo {
         this.szelesseg = szelesseg;
         this.magassag = magassag;
     }
-     */
+
     public Kijelzo(String nev, Double szelesseg, Double magassag, String felbontas, Integer kepernyoFrisssites, Integer portokSzama, Integer valaszIdo, Integer fogyasztas) {
         this.nev = nev;
         this.szelesseg = szelesseg;
