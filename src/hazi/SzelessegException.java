@@ -1,4 +1,4 @@
-package h_08;
+package hazi;
 
 /**
  *

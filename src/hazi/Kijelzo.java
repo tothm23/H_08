@@ -1,9 +1,9 @@
 package hazi;
 
-import h_08.FogyasztasException;
-import h_08.MagassagException;
-import h_08.PortSzamException;
-import h_08.SzelessegException;
+import hazi.FogyasztasException;
+import hazi.MagassagException;
+import hazi.PortSzamException;
+import hazi.SzelessegException;
 import java.util.Random;
 
 /**
