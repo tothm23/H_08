@@ -1,9 +1,5 @@
 package hazi;
 
-import hazi.FogyasztasException;
-import hazi.MagassagException;
-import hazi.PortSzamException;
-import hazi.SzelessegException;
 import java.util.Random;
 
 /**
@@ -13,7 +9,6 @@ import java.util.Random;
 public abstract class Kijelzo {
 
     /*
-    https://prohardver.hu/tudastar/grafikus_es_kepernyo_felbontasok.html
     6 tulajdonság
     1 csak látható - nev
     1 bármire megváltoztatható - kepernyoArany
@@ -25,8 +20,9 @@ public abstract class Kijelzo {
     private String nev;
     private Double szelesseg;
     private Double magassag;
-    private String grafikusFelbontas;
+    private GrafikusFelbontas grafikusFelbontas;
     private String kepernyoFelbontas;
+    private String kepernyoArany;
     private Integer kepernyoFrisssites;
     private Integer portokSzama;
     private Integer valaszIdo;
@@ -46,7 +42,7 @@ public abstract class Kijelzo {
     }
      */
     public Kijelzo(String nev, Double szelesseg, Double magassag,
-            String grafikusFelbontas, String kepernyoFelbontas,
+            GrafikusFelbontas grafikusFelbontas, String kepernyoFelbontas, String kepernyoArany,
             Integer kepernyoFrisssites, Integer portokSzama, Integer valaszIdo,
             Integer fogyasztas) {
         this.nev = nev;
@@ -54,6 +50,7 @@ public abstract class Kijelzo {
         this.magassag = magassag;
         this.grafikusFelbontas = grafikusFelbontas;
         this.kepernyoFelbontas = kepernyoFelbontas;
+        this.kepernyoArany = kepernyoArany;
         this.kepernyoFrisssites = kepernyoFrisssites;
         this.portokSzama = portokSzama;
         this.valaszIdo = valaszIdo;
@@ -102,11 +99,11 @@ public abstract class Kijelzo {
         }
     }
 
-    public String getGrafikusFelbontas() {
+    public GrafikusFelbontas getGrafikusFelbontas() {
         return grafikusFelbontas;
     }
 
-    public void setGrafikusFelbontas(String grafikusFelbontas) {
+    public void setGrafikusFelbontas(GrafikusFelbontas grafikusFelbontas) {
         this.grafikusFelbontas = grafikusFelbontas;
     }
 
@@ -116,6 +113,14 @@ public abstract class Kijelzo {
 
     public void setKepernyoFelbontas(String KepernyoFelbontas) {
         this.kepernyoFelbontas = KepernyoFelbontas;
+    }
+
+    public String getKepernyoArany() {
+        return kepernyoArany;
+    }
+
+    public void setKepernyoArany(String kepernyoArany) {
+        this.kepernyoArany = kepernyoArany;
     }
 
     public Integer getKepernyoFrisssites() {
@@ -155,11 +160,11 @@ public abstract class Kijelzo {
 
     private Long setGyariSzam() {
         Long gyariszam = new Random().nextLong();
-        
+
         while (gyariszam < 0) {
             gyariszam = new Random().nextLong();
         }
-        
+
         return gyariszam;
     }
 
